@@ -20,7 +20,7 @@ export default  function Order() {
     async function getOrderOptions() {
       try {
         const response = await fetch(
-          `${process.env.APIURL}/api/OptionsBurger`
+        `${process.env.APIURL}/api/OptionsBurger`
         );
 
         if (!response.ok) {
