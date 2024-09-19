@@ -56,7 +56,7 @@ const EditModal = ({ isOpen, onClose, propsOrder, onOrderUpdate }) => {
 
     try {
       const response = await fetch(
-        "http://burgermonapp.somee.com/api/Order/order", {
+        "https://burgermonapp.somee.com/api/Order/order", {
           method: 'PUT',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formOrder),

@@ -37,7 +37,7 @@ export default function Register(){
         return;
       }
 
-      const response = await fetch("http://burgermonapp.somee.com/api/User/register", {
+      const response = await fetch("https://burgermonapp.somee.com/api/User/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

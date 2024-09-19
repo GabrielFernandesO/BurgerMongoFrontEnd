@@ -20,7 +20,7 @@ export default  function Order() {
     async function getOrderOptions() {
       try {
         const response = await fetch(
-          "http://burgermonapp.somee.com/api/OptionsBurger"
+          "https://burgermonapp.somee.com/api/OptionsBurger"
         );
 
         if (!response.ok) {
@@ -54,7 +54,7 @@ export default  function Order() {
 
     try {
       const response = await fetch(
-        "http://burgermonapp.somee.com/api/Order",{
+        "https://burgermonapp.somee.com/api/Order",{
           method: 'POST',
           headers:{
             "Content-Type" : "application/json"
