@@ -34,7 +34,7 @@ export default function adminOrders() {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch(`https://burgermonapp.somee.com/api/Order`);
+      const response = await fetch("https://burgermonapp.somee.com/api/Order");
       const data = await response.json();
 
       if (data.flag === true) {
