@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 
 import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
-import Head from "next/head";
 
 export default function Login() {
   const router = useRouter();

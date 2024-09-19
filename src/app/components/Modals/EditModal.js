@@ -18,7 +18,7 @@ const EditModal = ({ isOpen, onClose, propsOrder, onOrderUpdate }) => {
     async function getOrderOptions() {
       try {
         const response = await fetch(
-          "http://burgermonapp.somee.com/api/OptionsBurger"
+          `${process.env.APIURL}/api/OptionsBurger`
         );
 
         if (!response.ok) {
@@ -56,7 +56,7 @@ const EditModal = ({ isOpen, onClose, propsOrder, onOrderUpdate }) => {
 
     try {
       const response = await fetch(
-        "https://burgermonapp.somee.com/api/Order/order", {
+        `${process.env.APIURL}/api/Order/order`, {
           method: 'PUT',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formOrder),

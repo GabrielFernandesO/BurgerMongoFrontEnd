@@ -20,7 +20,7 @@ export default function Orders() {
     if (status === "authenticated" && session?.user?.name) {
       try {
         const response = await fetch(
-          `https://burgermonapp.somee.com/api/Order/${session.user.name}`
+          `${process.env.APIURL}/api/Order/${session.user.name}`
         );
         if (!response.ok) throw new Error("Network response was not ok");
         const result = await response.json();

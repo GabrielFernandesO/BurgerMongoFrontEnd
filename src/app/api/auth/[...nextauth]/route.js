@@ -22,7 +22,7 @@ const handler = NextAuth({
       async authorize(credentials) {
         try {
           const response = await axios.post(
-            "https://burgermonapp.somee.com/api/User/login", // Certifique-se de que o protocolo e a URL estão corretos
+            `${process.env.APIURL}/api/User/login`, // Certifique-se de que o protocolo e a URL estão corretos
             {
               email: credentials.email,
               password: credentials.password,
