@@ -36,10 +36,9 @@ const handler = NextAuth({
           );
 
           console.log("Response data:", response.data);
-
           const data = response.data;
 
-          if (data.message === "Invalid credentials") {
+          if (data.message === "Invalid Credentials") {
             return Promise.reject(new Error("Credenciais Inválidas"));
           }
 
