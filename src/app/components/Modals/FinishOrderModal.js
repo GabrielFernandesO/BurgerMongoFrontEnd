@@ -5,7 +5,7 @@ const FinishOrderModal = ({ isOpen, onClose, propsOrder, onOrderUpdate }) => {
   async function cancelOrder(id) {
     try {
       const response = await fetch(
-        `${process.env.APIURL}/api/Order/${id}`,
+        `https://burgermonapp.somee.com/api/Order/${id}`,
         {
           method: "DELETE",
           headers: {

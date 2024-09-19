@@ -24,7 +24,7 @@ const StatusModal = ({ isOpen, onClose, propsOrder, onOrderUpdate }) => {
     };
 
     try {
-      const response = await fetch(`${process.env.APIURL}/api/Order/order`, {
+      const response = await fetch(`https://burgermonapp.somee.com/api/Order/order`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formOrder),

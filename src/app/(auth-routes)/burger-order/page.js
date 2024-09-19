@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
-export default  function Order() {
+export default function Order() {
   const { data: session } = useSession();
   const router = useRouter();
 
@@ -20,7 +20,7 @@ export default  function Order() {
     async function getOrderOptions() {
       try {
         const response = await fetch(
-        `${process.env.APIURL}/api/OptionsBurger`
+          `https://burgermonapp.somee.com/api/OptionsBurger`
         );
 
         if (!response.ok) {
@@ -39,30 +39,27 @@ export default  function Order() {
     getOrderOptions();
   }, []);
 
-  async function createOrder(e){
-    e.preventDefault()
+  async function createOrder(e) {
+    e.preventDefault();
 
     const formOrder = {
       name: session.user.name,
       bread: bread,
       meat: meat,
       salad: salad,
-      sauce: sauce
-    }
+      sauce: sauce,
+    };
 
-    console.log("ENVIOU", formOrder)
+    console.log("ENVIOU", formOrder);
 
     try {
-      const response = await fetch(
-        `${process.env.APIURL}/api/Order`,{
-          method: 'POST',
-          headers:{
-            "Content-Type" : "application/json"
-          },
-          body: JSON.stringify(formOrder)
-        }
-        
-      );
+      const response = await fetch(`https://burgermonapp.somee.com/api/Order`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formOrder),
+      });
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -70,17 +67,15 @@ export default  function Order() {
 
       const result = await response.json();
 
-      if(result.flag === true){
-        toast.success("Pedido criado")
-        router.push('/burger-orders')
+      if (result.flag === true) {
+        toast.success("Pedido criado");
+        router.push("/burger-orders");
       }
 
       console.log("Deu bom", result);
     } catch (err) {
       console.log("erro dado", err);
     }
-
-
   }
 
   return (
@@ -89,7 +84,10 @@ export default  function Order() {
         <h1 className="text-4xl text-black font-medium text-center mb-[40px] mt-[40px]">
           Monte seu burger
         </h1>
-        <form className="m-auto max-w-[350px] max-h-[500px]" onSubmit={createOrder}>
+        <form
+          className="m-auto max-w-[350px] max-h-[500px]"
+          onSubmit={createOrder}
+        >
           <div className="flex flex-col space-y-2 mb-10">
             <label className="border-l-4 border-amber-400 px-2 font-bold text-lg">
               Escolha o pão:
