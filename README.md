@@ -21,11 +21,6 @@ Para entender a fundo a estrutura e as funcionalidades do backend, acesse o repo
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
 
-## Licença
-
-Este projeto está licenciado sob a [sua licença aqui]. 
-
----
 
 ## Contato
 
