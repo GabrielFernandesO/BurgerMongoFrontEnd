@@ -28,7 +28,7 @@ Para dúvidas ou sugestões, você pode me contatar pelo e-mail: [gabrielgnsr200
 
 ## Apresentação do Projeto
 
-Confira a apresentação do projeto no YouTube: [Link para o vídeo](https://www.youtube.com) (substitua pelo link correto).
+Confira a apresentação do projeto no YouTube: [Link para o vídeo](https://youtu.be/96HlVB9bZWI) (substitua pelo link correto).
 
 Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato!
 
