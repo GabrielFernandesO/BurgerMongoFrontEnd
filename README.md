@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend do Sistema de Hamburgueria
 
-## Getting Started
+Este projeto é a interface do usuário desenvolvida com **Next.js**, um framework de React. A aplicação se conecta à API do backend para gerenciar pedidos e contas de usuários.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**: Framework de React que permite renderização do lado do servidor e geração de sites estáticos.
+- **Rotas Autenticadas e Públicas**: Implementação de rotas que garantem segurança e acessibilidade aos usuários.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Integração com a API**: Consome a API do projeto backend para operações de CRUD de pedidos e criação de contas.
+- **Rotas Autenticadas**: Protege áreas sensíveis da aplicação, garantindo que apenas usuários autenticados tenham acesso.
+- **Rotas Públicas**: Permite acesso a funcionalidades básicas sem necessidade de autenticação.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Repositório da API
 
-## Learn More
+Para entender a fundo a estrutura e as funcionalidades do backend, acesse o repositório da API: [Sistema de Hamburgueria API](https://github.com/GabrielFernandesO/BurgerMongoDB) (substitua pelo link correto).
 
-To learn more about Next.js, take a look at the following resources:
+## Contribuição
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Licença
 
-## Deploy on Vercel
+Este projeto está licenciado sob a [sua licença aqui]. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contato
+
+Para dúvidas ou sugestões, você pode me contatar pelo e-mail: [gabrielgnsr2000@hotmail.com](mailto:gabrielgnsr2000@hotmail.com).
+
+## Apresentação do Projeto
+
+Confira a apresentação do projeto no YouTube: [Link para o vídeo](https://www.youtube.com) (substitua pelo link correto).
+
+Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato!
+
