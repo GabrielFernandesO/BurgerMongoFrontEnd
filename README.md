@@ -15,7 +15,7 @@ Este projeto é a interface do usuário desenvolvida com **Next.js**, um framewo
 
 ## Repositório da API
 
-Para entender a fundo a estrutura e as funcionalidades do backend, acesse o repositório da API: [Sistema de Hamburgueria API](https://github.com/GabrielFernandesO/BurgerMongoDB) (substitua pelo link correto).
+Para entender a fundo a estrutura e as funcionalidades do backend, acesse o repositório da API: [Sistema de Hamburgueria API](https://github.com/GabrielFernandesO/BurgerMongoDB)
 
 ## Contribuição
 
