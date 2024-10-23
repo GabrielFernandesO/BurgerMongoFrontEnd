@@ -5,9 +5,9 @@ import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-
 import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
+import { FaSpinner } from "react-icons/fa"; // Ícone de carregamento
 
 export default function Login() {
   const router = useRouter();
@@ -15,10 +15,13 @@ export default function Login() {
   const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Estado para controlar carregamento
 
   async function handleLogin(e) {
     e.preventDefault();
     console.log(email, password);
+    
+    setIsLoading(true); // Iniciar carregamento
 
     try {
       const result = await signIn("credentials", {
@@ -39,15 +42,17 @@ export default function Login() {
       }
     } catch (err) {
       toast.error("Ocorreu algum erro", err);
+    } finally {
+      setIsLoading(false); // Parar carregamento
     }
   }
 
   return (
     <>
-      <section className="bg-[url('/images/burger-login.jpeg')] h-screen bg-cover   flex items-center justify-center">
+      <section className="bg-[url('/images/burger-login.jpeg')] h-screen bg-cover flex items-center justify-center">
         <form
           onSubmit={handleLogin}
-          className=" flex flex-col items-center bg-zinc-900 w-[420px] h-[500px] rounded-2xl pt-10 text-white"
+          className="flex flex-col items-center bg-zinc-900 w-[420px] h-[500px] rounded-2xl pt-10 text-white"
         >
           <div className="flex flex-col space-y-1 mb-6">
             <label>Email</label>
@@ -71,12 +76,12 @@ export default function Login() {
               />
               {visible ? (
                 <FaEye
-                  className=" text-xl absolute right-2 text-black cursor-pointer"
+                  className="text-xl absolute right-2 text-black cursor-pointer"
                   onClick={() => setVisible(!visible)}
                 />
               ) : (
                 <FaEyeSlash
-                  className=" text-xl absolute right-2 text-black cursor-pointer"
+                  className="text-xl absolute right-2 text-black cursor-pointer"
                   onClick={() => setVisible(!visible)}
                 />
               )}
@@ -85,9 +90,14 @@ export default function Login() {
           <div className="flex flex-col space-y-5 mb-8 justify-center items-center">
             <button
               type="submit"
-              className="bg-amber-500 font-bold transition duration-500 hover:bg-amber-400 text-black w-[170px] h-[35px] "
+              className="bg-amber-500 font-bold transition duration-500 hover:bg-amber-400 text-black w-[170px] h-[35px] flex items-center justify-center"
+              disabled={isLoading} // Desabilitar o botão enquanto carrega
             >
-              Entrar
+              {isLoading ? (
+                <FaSpinner className="animate-spin mr-2" /> // Ícone de carregamento
+              ) : (
+                "Entrar" // Texto "Entrar" só aparece se não estiver carregando
+              )}
             </button>
             <Link
               href={"/"}
